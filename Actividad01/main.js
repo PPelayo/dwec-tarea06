@@ -33,10 +33,16 @@ function cargarImagenPerros() {
 }
 
 function cargarImagenGatos() {
-    fetch(URL_GATOS)
-    .then(response => response.json())
-    .then(data => {
-        const url = data[0].url
+    //En lugar de usar fetch de javascript, usaremos axios
+    // fetch(URL_GATOS)
+    // .then(response => response.json())
+    // .then(data => {
+    //     const url = data[0].url
+    //     $('#img-gatos').src = url
+    // })
+    axios.get(URL_GATOS)
+    .then(response => {
+        const url = response.data[0].url
         $('#img-gatos').src = url
     })
 }
