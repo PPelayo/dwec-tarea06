@@ -1,0 +1,1 @@
+Nota: Para las actividades hechas con React, deberemos de ejecutarlas con el comando __npm run dev__
